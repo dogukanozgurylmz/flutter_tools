@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const BlurButton(),
+                    builder: (context) => const BlurBackground(),
                   ),
                 );
               },

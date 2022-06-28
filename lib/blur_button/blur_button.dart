@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class BlurButton extends StatelessWidget {
-  const BlurButton({Key? key}) : super(key: key);
+class BlurBackground extends StatelessWidget {
+  const BlurBackground({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class BlurButton extends StatelessWidget {
             height: double.infinity,
           ),
           const Center(
-            child: BlurButtonWidget(
+            child: BlurBackgroundWidget(
               opacity: 0.2,
               blur: 10,
               borderRadius: 20,
@@ -35,13 +35,13 @@ class BlurButton extends StatelessWidget {
   }
 }
 
-class BlurButtonWidget extends StatelessWidget {
+class BlurBackgroundWidget extends StatelessWidget {
   final double blur;
   final double opacity;
   final Widget child;
   final double borderRadius;
 
-  const BlurButtonWidget(
+  const BlurBackgroundWidget(
       {Key? key,
       required this.blur,
       required this.opacity,
