@@ -13,24 +13,25 @@ class BlurBackground extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          Image.network(
-            "https://images5.alphacoders.com/432/432500.jpg",
-            fit: BoxFit.cover,
-            height: double.infinity,
-          ),
+          buildBackgroundImage(),
           const Center(
             child: BlurBackgroundWidget(
               opacity: 0.2,
               blur: 10,
               borderRadius: 20,
-              child: SizedBox(
-                height: 300,
-                width: 300,
-              ),
+              child: SizedBox(height: 300, width: 300),
             ),
           ),
         ],
       ),
+    );
+  }
+
+  Image buildBackgroundImage() {
+    return Image.network(
+      "https://images5.alphacoders.com/432/432500.jpg",
+      fit: BoxFit.cover,
+      height: double.infinity,
     );
   }
 }
